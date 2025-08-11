@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:hsl(221, 100%, 96%);
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.card {
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Mobile first - stack vertically */
+    width: 100%;
+    max-width: 600px;
+    border-radius: 0 0 30px 30px; /* Only bottom corners rounded on mobile */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.result {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    padding: 40px 30px;
+    text-align: center;
+    color: white;
+    border-radius: 0 0 30px 30px; /* Bottom corners rounded */
+}
+
+.result h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: hsl(241, 100%, 89%);
+    margin-bottom: 30px;
+}
+
+/* Circular Score Display */
+.score-circle {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+}
+
+.score {
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+}
+
+.total {
+    font-size: 16px;
+    color: hsl(241, 100%, 89%);
+    opacity: 0.7;
+}
+
+.result h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.result p {
+    font-size: 16px;
+    color: hsl(241, 100%, 89%);
+    line-height: 1.4;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+/* RIGHT SIDE - Summary */
+.summary {
+    padding: 30px;
+}
+
+.summary h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: hsl(224, 30%, 27%);
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.summary-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.summary-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Category Colors */
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.05);
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.05);
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.05);
+}
+
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.05);
+}
+
+/* Category text colors */
+.reaction .category { color: hsl(0, 100%, 67%); }
+.memory .category { color: hsl(39, 100%, 56%); }
+.verbal .category { color: hsl(166, 100%, 37%); }
+.visual .category { color: hsl(234, 85%, 45%); }
+
+.summary-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.category {
+    font-weight: 500;
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.summary-item .score {
+    font-weight: 700;
+    color: hsl(224, 30%, 27%);
+    font-size: 16px;
+}
+
+.summary-item .max {
+    color: hsl(224, 30%, 27%);
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.summary-list li {
+    cursor: pointer;
+}
+
+/* Continue Button */
+.continue-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+/* DESKTOP - Side by Side Layout */
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row;
+        border-radius: 30px; /* All corners rounded */
+        max-width: 700px;
+    }
+
+    .result {
+        flex: 1;
+        border-radius: 30px; /* All corners rounded for desktop */
+        padding: 40px 35px;
+    }
+
+    .summary {
+        flex: 1;
+        padding: 40px 35px;
+    }
+
+    .score-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .score {
+        font-size: 70px;
+    }
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 30px;
+  color: hsl(224, 30%, 27%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
