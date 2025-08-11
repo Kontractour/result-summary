@@ -88,15 +88,3 @@ function animateNumber(element, start, end, duration) {
     
     requestAnimationFrame(updateNumber);
 }
-
-// Optional: Add button click handler
-document.addEventListener('DOMContentLoaded', function() {
-    const continueBtn = document.querySelector('.continue-btn');
-    
-    if (continueBtn) {
-        continueBtn.addEventListener('click', function() {
-            // You can add what happens when continue is clicked
-            alert('Continue clicked! Add your next action here.');
-        });
-    }
-});
