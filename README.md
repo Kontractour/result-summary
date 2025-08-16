@@ -6,7 +6,7 @@ This project is a solution to the [Frontend Mentor](https://www.frontendmentor.i
 ---
 
 ## 🔗 Live Demo
-[**View Live Project**](https://kontractour.github.io/results-summary/)
+[**View Live Project**](https://kontractour.github.io/result-summary/)
 
 ### 📱 Mobile View  
 ![Mobile version of the Results Summary design](./design/mobile-design.jpg)  
